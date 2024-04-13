@@ -59,7 +59,7 @@ body, h1, p {
 /* Basic styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #e8e9ab;
     color: #333;
     min-height: 100vh;
     display: flex;
@@ -156,6 +156,66 @@ button:hover {
 }
 
 #home_button {
-    float: right ;
-    margin-top: -30px;
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #e4d12d; 
+    color: #fff;
+    text-decoration: none; 
+    border-radius: 5px;
+    float: right;
 }   
+#text_cu_shadow {
+    display: inline-block;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3); 
+}
+@media screen and (max-width: 768px) {
+    p#text_cu_shadow {
+      font-size: 10px; 
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    #photo1 {
+    width: 200px;
+    height: 200px;
+    }
+}
+@keyframes flip {
+    0% { transform: rotateX(0deg); }
+    50% { transform: rotateX(180deg); }
+    100% { transform: rotateX(360deg); }
+  }
+
+  #photo1:hover {
+    animation: flip 1s ease-in-out forwards;
+  }
+
+  #animated {
+    width: 200px;
+    height: 100px;
+
+    position: absolute;
+    top: 2%; /* Alinierea verticală în mijloc */
+    left: 70%; /* Alinierea orizontală în mijloc */
+    transform: translate(-50%, -50%); /* Corecția pentru a fi exact în mijloc */
+    animation: changeProperties 3s ease-in-out infinite alternate; /* Aplicarea animației */
+  }
+
+  /* Definirea animației folosind pseudoclasele @keyframes */
+  @keyframes changeProperties {
+    0% {
+      /*  background-color: red;Schimbarea culorii de fundal la roșu */
+      transform: rotate(0deg); /* Rotirea elementului la 0 grade */
+    }
+    50% {
+       /* background-color: blue;Schimbarea culorii de fundal la albastru */
+      transform: rotate(180deg); /* Rotirea elementului la 180 de grade */
+    }
+    100% {
+       /*background-color: green;* Schimbarea culorii de fundal la verde */
+      transform: rotate(360deg); /* Rotirea elementului la 360 de grade */
+    }
+  }
